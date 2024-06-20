@@ -42,7 +42,7 @@ if [ -e ".git/config" ]; then
         try="True"
         tries=0
         while [ "$try" = "True" ]; do
-            read -p "Looks like we are inside a git repository, do you wish to clone inside it? (yes/no) [no] " rd_cln
+            read -r -p "Looks like we are inside a git repository, do you wish to clone inside it? (yes/no) [no] " rd_cln
             if [ -z "$rd_cln" ]; then
                 rd_cln='no'
             fi
@@ -67,7 +67,7 @@ if [ -e ".git/config" ]; then
 fi
 if [ "$clone_repo" = "True" ]; then
     echo "Cloning Popcorn Time"
-    read -p "Where do you wish to clone Popcorn Time to? [popcorn] " dir
+    read -r -p "Where do you wish to clone Popcorn Time to? [popcorn] " dir
     if [ -z "$dir" ]; then
         dir='popcorn'
     elif [ "$dir" = "/" ]; then
@@ -80,7 +80,7 @@ if [ "$clone_repo" = "True" ]; then
         try="True"
         tries=0
         while [ "$try" = "True" ]; do
-            read -p "Directory $dir already exists, do you wish to delete it and redownload? (yes/no) [no] " rd_ans
+            read -r -p "Directory $dir already exists, do you wish to delete it and redownload? (yes/no) [no] " rd_ans
             if [ -z "$rd_ans" ]; then
                 rd_ans='no'
             fi
