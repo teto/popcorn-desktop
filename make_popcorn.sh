@@ -124,7 +124,7 @@ fi
 
 if yarn build; then
     echo "Popcorn Time built successfully!"
-    if [[ `uname -s` != *"NT"* ]]; then # if not windows
+    if [[ "$(uname -s)" != *"NT"* ]]; then # if not windows
         ./Create-Desktop-Entry
     fi
     echo "Run 'yarn start' to launch the app or run Popcorn-Time from the ./build folder..."
