@@ -57,7 +57,7 @@ if [ -e ".git/config" ]; then
             fi
         done
         if [ "$rd_cln" = "no" ]; then
-            echo "You appear to be inside of a Popcorn Time repository already, not cloning"
+            echo "Not cloning"
             clone_repo="False"
         else
             echo "You've chosen to clone inside the current directory"
