@@ -54,6 +54,13 @@
             subswitch: '--set-subtitle ',
             fs: '--action window/enter-fs'
         },
+        'memento': {
+            type: 'mpv',
+            switches: '--no-terminal',
+            subswitch: '--sub-file=',
+            fs: '--fs',
+            filenameswitch: '--force-media-title='
+        },
         'mpv': {
             type: 'mpv',
             switches: '--no-terminal',
